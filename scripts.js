@@ -19,6 +19,6 @@ if (emailForm && successMessage && emailFormWrapper) {
   emailForm.addEventListener("submit", function (e) {
     e.preventDefault();
     emailFormWrapper.classList.add("hidden");
-    successMessage.classList.remove("hidden");
+    successMessage.style.display = "block";
   });
 }
