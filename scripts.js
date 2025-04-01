@@ -1,0 +1,1 @@
+// Floating dots animation removed

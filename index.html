@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistime.ai - Los nuevos integrantes de tu equipo</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="noise-texture"></div>
+    <div class="grid-lines"></div>
+    
+    <div class="glowing-orb orb-1"></div>
+    <div class="glowing-orb orb-2"></div>
+    <div class="glowing-orb orb-3"></div>
+    
+    
+    <canvas id="ribbonCanvas" class="ribbon-canvas"></canvas>
+  </div>
+
+  <main class="content">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo-container fade-in" style="--delay: 0.1s">
+        <img src="./asistime-logo.jpg" alt="Asistime.ai Logo" class="logo">
+      </div>
+      
+      <!-- Main content -->
+      <div class="main-content">
+        <h1 class="heading fade-in" style="--delay: 0.3s">
+          Los nuevos integrantes de tu equipo que <span class="gradient-text">devuelven tu tiempo</span>
+        </h1>
+        
+        <p class="description fade-in" style="--delay: 0.5s">
+          Pronto lanzaremos una plataforma de IA que transformará las
+          <span class="rotating-text-container">
+            <span id="rotatingText" class="rotating-text"></span>
+          </span>
+          de tu empresa. <span class="highlight">Más tiempo para lo que amas.</span>
+        </p>
+        
+        <div class="email-form-container fade-in" style="--delay: 0.7s">
+          <div id="emailFormWrapper">
+            <form id="emailForm" class="email-form">
+              <div class="input-wrapper">
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                <span id="emailError" class="error-message"></span>
+              </div>
+              <button type="submit" id="submitButton" class="submit-btn">
+                <span class="btn-text">Notificarme</span>
+                <span class="loading-spinner hidden"></span>
+              </button>
+            </form>
+          </div>
+          
+          <div id="successMessage" class="success-message hidden">
+            <h3>¡Gracias por suscribirte!</h3>
+            <p>Te notificaremos cuando estemos listos para lanzar.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <footer class="footer fade-in" style="--delay: 0.9s">
+        <p>© 2025 Asistime.ai - Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
