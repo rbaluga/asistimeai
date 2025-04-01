@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="background">
+    <div class="gradient-bg"></div>
     <div class="noise-texture"></div>
     <div class="grid-lines"></div>
     
@@ -18,7 +19,7 @@
     <div class="glowing-orb orb-2"></div>
     <div class="glowing-orb orb-3"></div>
     
-    
+    <canvas id="dotsCanvas" class="dots-canvas"></canvas>
     <canvas id="ribbonCanvas" class="ribbon-canvas"></canvas>
   </div>
 
@@ -72,5 +73,11 @@
   </main>
 
   <script src="./scripts.js"></script>
+
+<h2 style="text-align: center; font-weight: normal;">
+  Asistime te ayuda a <span id="rotating-word">organizarte</span>
+</h2>
+
+<script src='scripts.js'></script>
 </body>
 </html>
