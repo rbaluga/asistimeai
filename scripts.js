@@ -10,3 +10,15 @@ if (rotatingText) {
     rotatingText.textContent = words[index];
   }, 2000);
 }
+
+const emailForm = document.getElementById("emailForm");
+const successMessage = document.getElementById("successMessage");
+const emailFormWrapper = document.getElementById("emailFormWrapper");
+
+if (emailForm && successMessage && emailFormWrapper) {
+  emailForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    emailFormWrapper.classList.add("hidden");
+    successMessage.classList.remove("hidden");
+  });
+}
