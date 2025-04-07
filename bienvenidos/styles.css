@@ -1,0 +1,94 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #0070f3;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  color: #555;
+}
+
+.features ul li {
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.section, .section-alt {
+  padding: 60px 20px;
+}
+
+.section-alt {
+  background-color: #f0f4f8;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background 0.3s ease;
+}
+
+.primary {
+  background-color: #0070f3;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #005bb5;
+}
+
+.secondary {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.secondary:hover {
+  background-color: #cbd5e0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+  background: #f9fafb;
+  margin-top: 40px;
+}
