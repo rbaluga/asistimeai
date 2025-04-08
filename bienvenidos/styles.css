@@ -2,8 +2,9 @@
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
   color: #333;
+  background-attachment: fixed;
 }
 
 .header {
@@ -26,26 +27,29 @@ body {
   margin-bottom: 20px;
 }
 
-.highlight {
-  color: #4f46e5; /* Azul más predominante */
+.highlight-green {
+  color: #10b981;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.subtext-box {
+.subtext-glass {
   margin: 30px auto 50px;
-  padding: 20px;
-  background: #ffffffdd;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  padding: 20px 30px;
   max-width: 600px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 15px;
   font-size: 1.4em;
-  color: #555;
+  color: #333;
 }
 
 .video-container {
