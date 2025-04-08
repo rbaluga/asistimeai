@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
   color: #333;
 }
 
@@ -27,20 +27,25 @@ body {
 }
 
 .highlight {
-  color: #6d28d9;
+  color: #4f46e5; /* Azul más predominante */
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.subtext {
-  font-size: 1.6em;
+.subtext-box {
+  margin: 30px auto 50px;
+  padding: 20px;
+  background: #ffffffdd;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  max-width: 600px;
+  font-size: 1.4em;
   color: #555;
-  margin: 30px 0 50px;
 }
 
 .video-container {
@@ -83,12 +88,12 @@ body {
 }
 
 .primary {
-  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
   color: #fff;
 }
 
 .primary:hover {
-  background: linear-gradient(90deg, #4338ca, #7e22ce);
+  background: linear-gradient(90deg, #4338ca, #6d28d9);
 }
 
 .secondary {
