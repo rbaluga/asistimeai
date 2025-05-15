@@ -72,5 +72,35 @@
   </main>
 
   <script src="./scripts.js"></script>
+  <!-- Botones en el footer -->
+<footer style="text-align:center; padding: 2em 0;">
+  <a href="#" onclick="toggleModal('privacy-modal')">Política de Privacidad</a> · 
+  <a href="#" onclick="toggleModal('terms-modal')">Términos y Condiciones</a>
+</footer>
+
+<!-- MODALES -->
+<div id="privacy-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleModal('privacy-modal')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <div class="scroll-content">
+      <!-- INSERTÁ ACÁ EL TEXTO DE PRIVACIDAD -->
+      <p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+      <p>En ASISTIME nos comprometemos a proteger la privacidad...</p>
+    </div>
+  </div>
+</div>
+
+<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleModal('terms-modal')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <div class="scroll-content">
+      <!-- INSERTÁ ACÁ EL TEXTO DE TÉRMINOS -->
+      <p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+      <p>Estos Términos regulan el uso del sitio web...</p>
+    </div>
+  </div>
+</div>
 </body>
 </html>
