@@ -22,3 +22,7 @@ if (emailForm && successMessage && emailFormWrapper) {
     successMessage.style.display = "block";
   });
 }
+function toggleModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
