@@ -1,106 +1,125 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asistime.ai - Los nuevos integrantes de tu equipo</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asistime.ai - Los nuevos integrantes de tu equipo</title>
+<link href="./styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <div class="background">
-    <div class="gradient-bg"></div>
-    <div class="noise-texture"></div>
-    <div class="grid-lines"></div>
-    
-    <div class="glowing-orb orb-1"></div>
-    <div class="glowing-orb orb-2"></div>
-    <div class="glowing-orb orb-3"></div>
-    
-    <canvas id="dotsCanvas" class="dots-canvas"></canvas>
-    <canvas id="ribbonCanvas" class="ribbon-canvas"></canvas>
-  </div>
-
-  <main class="content">
-    <div class="container">
-      <!-- Logo -->
-      <div class="logo-container fade-in" style="--delay: 0.1s">
-        <img src="./asistime-logo.jpg" alt="Asistime.ai Logo" class="logo">
-      </div>
-      
-      <!-- Main content -->
-      <div class="main-content">
-        <h1 class="heading fade-in" style="--delay: 0.3s">
+<div class="background">
+<div class="gradient-bg"></div>
+<div class="noise-texture"></div>
+<div class="grid-lines"></div>
+<div class="glowing-orb orb-1"></div>
+<div class="glowing-orb orb-2"></div>
+<div class="glowing-orb orb-3"></div>
+<canvas class="dots-canvas" id="dotsCanvas"></canvas>
+<canvas class="ribbon-canvas" id="ribbonCanvas"></canvas>
+</div>
+<main class="content">
+<div class="container">
+<!-- Logo -->
+<div class="logo-container fade-in" style="--delay: 0.1s">
+<img alt="Asistime.ai Logo" class="logo" src="./asistime-logo.jpg"/>
+</div>
+<!-- Main content -->
+<div class="main-content">
+<h1 class="heading fade-in" style="--delay: 0.3s">
           Los nuevos integrantes de tu equipo que <span class="gradient-text">devuelven tu tiempo.</span>
-        </h1>
-        
-        <p class="description fade-in" style="--delay: 0.5s">
+</h1>
+<p class="description fade-in" style="--delay: 0.5s">
           La plataforma conversacional multi-agente de IA que transformará
           <span class="rotating-text-container">
-            <span id="rotatingText" class="rotating-text"></span>
-          </span>
+<span class="rotating-text" id="rotatingText"></span>
+</span>
           de tu empresa.
         </p>
-        
-        <div class="email-form-container fade-in" style="--delay: 0.7s">
-          <div id="emailFormWrapper">
-            <form id="emailForm" class="email-form">
-              <div class="input-wrapper">
-                <input type="email" id="email" placeholder="Tu correo electrónico" required>
-                <span id="emailError" class="error-message"></span>
-              </div>
-              <button type="submit" id="submitButton" class="submit-btn">
-                <span class="btn-text">Notificarme</span>
-                <span class="loading-spinner hidden"></span>
-              </button>
-            </form>
-          </div>
-          
-          <div id="successMessage" class="success-message hidden">
-            <h3>🎉 Te mantendremos notificado de nuestro lanzamiento oficial</h3>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Footer -->
-      <footer class="footer fade-in" style="--delay: 0.9s">
-        <p>© 2025 Asistime.ai - Todos los derechos reservados.</p>
-      </footer>
-    </div>
-  </main>
-
-  <script src="./scripts.js"></script>
-  <!-- Botones en el footer -->
+<div class="email-form-container fade-in" style="--delay: 0.7s">
+<div id="emailFormWrapper">
+<form class="email-form" id="emailForm">
+<div class="input-wrapper">
+<input id="email" placeholder="Tu correo electrónico" required="" type="email"/>
+<span class="error-message" id="emailError"></span>
+</div>
+<button class="submit-btn" id="submitButton" type="submit">
+<span class="btn-text">Notificarme</span>
+<span class="loading-spinner hidden"></span>
+</button>
+</form>
+</div>
+<div class="success-message hidden" id="successMessage">
+<h3>🎉 Te mantendremos notificado de nuestro lanzamiento oficial</h3>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer fade-in" style="--delay: 0.9s">
+<p>© 2025 Asistime.ai - Todos los derechos reservados.</p>
+</footer>
+</div>
+</main>
+<script src="./scripts.js"></script>
+<!-- Botones en el footer -->
 <footer style="text-align:center; padding: 2em 0;">
-  <a href="#" onclick="toggleModal('privacy-modal')">Política de Privacidad</a> · 
+<a href="#" onclick="toggleModal('privacy-modal')">Política de Privacidad</a> · 
+  <a href="#" onclick="toggleModal('terms-modal')">Términos y Condiciones</a>
+</footer>
+<!-- MODALES -->
+<div class="modal" id="privacy-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('privacy-modal')">×</span>
+<h2>Política de Privacidad</h2>
+<div class="scroll-content">
+<!-- INSERTÁ ACÁ EL TEXTO DE PRIVACIDAD -->
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>En ASISTIME nos comprometemos a proteger la privacidad...</p>
+</div>
+</div>
+</div>
+<div class="modal" id="terms-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('terms-modal')">×</span>
+<h2>Términos y Condiciones</h2>
+<div class="scroll-content">
+<!-- INSERTÁ ACÁ EL TEXTO DE TÉRMINOS -->
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>Estos Términos regulan el uso del sitio web...</p>
+</div>
+</div>
+</div>
+
+<footer style="text-align:center; padding: 2em 0;">
+<a href="#" onclick="toggleModal('privacy-modal')">Política de Privacidad</a> · 
   <a href="#" onclick="toggleModal('terms-modal')">Términos y Condiciones</a>
 </footer>
 
-<!-- MODALES -->
-<div id="privacy-modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="toggleModal('privacy-modal')">&times;</span>
-    <h2>Política de Privacidad</h2>
-    <div class="scroll-content">
-      <!-- INSERTÁ ACÁ EL TEXTO DE PRIVACIDAD -->
-      <p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
-      <p>En ASISTIME nos comprometemos a proteger la privacidad...</p>
-    </div>
-  </div>
+<!-- MODALES LEGALES -->
+<div class="modal" id="privacy-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('privacy-modal')">×</span>
+<h2>Política de Privacidad</h2>
+<div class="scroll-content">
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>En ASISTIME nos comprometemos a proteger la privacidad de quienes interactúan con nuestra plataforma...</p>
+<p>[Texto completo de la política irá aquí]</p>
 </div>
-
-<div id="terms-modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="toggleModal('terms-modal')">&times;</span>
-    <h2>Términos y Condiciones</h2>
-    <div class="scroll-content">
-      <!-- INSERTÁ ACÁ EL TEXTO DE TÉRMINOS -->
-      <p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
-      <p>Estos Términos regulan el uso del sitio web...</p>
-    </div>
-  </div>
+</div>
+</div>
+<div class="modal" id="terms-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('terms-modal')">×</span>
+<h2>Términos y Condiciones</h2>
+<div class="scroll-content">
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>Estos Términos regulan el uso del sitio web y la aceptación por parte del usuario...</p>
+<p>[Texto completo de los términos irá aquí]</p>
+</div>
+</div>
 </div>
 </body>
 </html>
