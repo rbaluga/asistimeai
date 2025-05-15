@@ -1,18 +1,115 @@
-
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Asistime.ai</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asistime.ai - Los nuevos integrantes de tu equipo</title>
+<link href="./styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <div style="text-align:center; padding: 5em">
-    <h1>Bienvenido a Asistime.ai</h1>
-    <p>
-      <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a> ·
-      <a href="terminos-y-condiciones.html" target="_blank">Términos y Condiciones</a>
-    </p>
-  </div>
+<div class="background">
+<div class="gradient-bg"></div>
+<div class="noise-texture"></div>
+<div class="grid-lines"></div>
+<div class="glowing-orb orb-1"></div>
+<div class="glowing-orb orb-2"></div>
+<div class="glowing-orb orb-3"></div>
+<canvas class="dots-canvas" id="dotsCanvas"></canvas>
+<canvas class="ribbon-canvas" id="ribbonCanvas"></canvas>
+</div>
+<main class="content">
+<div class="container">
+<!-- Logo -->
+<div class="logo-container fade-in" style="--delay: 0.1s">
+<img alt="Asistime.ai Logo" class="logo" src="./asistime-logo.jpg"/>
+</div>
+<!-- Main content -->
+<div class="main-content">
+<h1 class="heading fade-in" style="--delay: 0.3s">
+          Los nuevos integrantes de tu equipo que <span class="gradient-text">devuelven tu tiempo.</span>
+</h1>
+<p class="description fade-in" style="--delay: 0.5s">
+          La plataforma conversacional multi-agente de IA que transformará
+          <span class="rotating-text-container">
+<span class="rotating-text" id="rotatingText"></span>
+</span>
+          de tu empresa.
+        </p>
+<div class="email-form-container fade-in" style="--delay: 0.7s">
+<div id="emailFormWrapper">
+<form class="email-form" id="emailForm">
+<div class="input-wrapper">
+<input id="email" placeholder="Tu correo electrónico" required="" type="email"/>
+<span class="error-message" id="emailError"></span>
+</div>
+<button class="submit-btn" id="submitButton" type="submit">
+<span class="btn-text">Notificarme</span>
+<span class="loading-spinner hidden"></span>
+</button>
+</form>
+</div>
+<div class="success-message hidden" id="successMessage">
+<h3>🎉 Te mantendremos notificado de nuestro lanzamiento oficial</h3>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer fade-in" style="--delay: 0.9s">
+<p>© 2025 Asistime.ai - Todos los derechos reservados.</p>
+</footer>
+</div>
+</main>
+<script src="./scripts.js"></script>
+<!-- Botones en el footer -->
+<footer style="text-align:center; padding: 2em 0;">
+ · 
+  
+</footer>
+<!-- MODALES -->
+<div class="modal" id="privacy-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('privacy-modal')">×</span>
+<h2>Política de Privacidad</h2>
+<div class="scroll-content">ASISTIME.AI S.A.S.<br/><br/> Última actualización: 17 de Abril de 2025<br/><br/>Introducción<br/><br/>En ASISTIME.AI S.A.S. (en adelante, “Asistime”, “nosotros” o “nuestra empresa”) nos comprometemos a proteger la privacidad y los datos personales de quienes interactúan con nuestra plataforma.<br/><br/>Esta Política de Privacidad describe cómo recolectamos, utilizamos, almacenamos y protegemos los datos personales de los usuarios (en adelante, el “Usuario”) que acceden a nuestro sitio web https://www.asistime.ai (en adelante, el “Sitio Web”), y explica los derechos que les asisten en virtud de la Ley N° 18.331 de Protección de Datos Personales de la República Oriental del Uruguay y normativa complementaria.<br/><br/>Responsable del tratamiento<br/><br/>El responsable del tratamiento de los datos personales es:<br/><br/>ASISTIME.AI S.A.S.<br/>📍  Montevideo, Uruguay<br/>📩  legal@asistime.ai<br/><br/>¿Qué datos recolectamos?<br/><br/>Recolectamos datos personales cuando el Usuario:<br/><br/>Navega por el Sitio Web<br/>Completa formularios de contacto<br/>Solicita una demostración (“demo”)<br/>Interactúa con nuestros asistentes de IA<br/>Se comunica a través de nuestros canales (email, redes, WhatsApp, etc.)<br/><br/>a) Datos proporcionados por el Usuario:<br/><br/>Nombre completo<br/>Dirección de correo electrónico<br/>Número de teléfono<br/>Empresa y cargo<br/>País o región<br/>Cualquier otro dato ingresado voluntariamente en formularios o chats<br/><br/>b) Datos técnicos y de navegación:<br/><br/>Dirección IP<br/>Tipo de navegador y sistema operativo<br/>Dispositivo utilizado<br/>Fecha y hora de acceso<br/>Páginas visitadas<br/>Interacciones en el sitio (clics, formularios, tiempos)<br/><br/>c) Datos conversacionales generados por IA:<br/><br/>Mensajes enviados al asistente conversacional<br/>Logs de interacción<br/>Respuestas generadas automáticamente (outputs de IA)<br/><br/>No recolectamos intencionalmente datos sensibles (salud, creencias religiosas, orientación sexual, etc.). Si el Usuario los comparte, lo hace bajo su exclusiva responsabilidad.<br/><br/>¿Con qué finalidades usamos los datos?<br/><br/>Tratamos los datos personales con las siguientes finalidades:<br/><br/>Responder consultas y coordinar demostraciones;<br/>Establecer comunicaciones comerciales (enviar información sobre nuestros productos, novedades, eventos o contenidos);<br/>Personalizar la experiencia del Usuario y mostrar contenido relevante;<br/>Analizar métricas de uso y comportamiento en el Sitio Web;<br/>Mejorar nuestros productos y servicios, incluyendo el entrenamiento y evaluación de modelos de inteligencia artificial;<br/>Cumplir con requerimientos legales o regulatorios;<br/>Evitar fraudes, abusos o usos indebidos del sistema.<br/><br/>Los datos podrán ser utilizados de forma anonimizada y agregada para fines estadísticos, de benchmarking y optimización interna.<br/><br/>Base legal para el tratamiento<br/><br/>Tratamos los datos personales con las siguientes finalidades:<br/><br/>Consentimiento del Usuario, libre e informado, al completar formularios o utilizar el Sitio Web;<br/>Ejecución de medidas precontractuales, como la solicitud de una demo o consulta comercial;<br/>Interés legítimo de Asistime en mejorar sus productos y comunicaciones;<br/>Cumplimiento de obligaciones legales, regulatorias o contractuales.<br/><br/>¿Con quién compartimos los datos?<br/><br/>Asistime no vende ni cede datos personales a terceros, pero puede compartir información con:<br/><br/>Proveedores tecnológicos, tales como servicios de hosting, analítica web, CRM, email marketing y almacenamiento en la nube, bajo estrictas obligaciones contractuales de confidencialidad;<br/>Autoridades públicas si fuera requerido por ley, orden judicial o proceso administrativo.<br/><br/>Subprocesadores tecnológicos frecuentes:<br/><br/>Google Cloud / Firebase (hosting, analytics)<br/>Hubspot / Brevo / Mailchimp (marketing y contacto)<br/>OpenAI o similares (si se utilizan modelos externos)<br/><br/>Todos los proveedores son cuidadosamente seleccionados para garantizar niveles adecuados de protección y cumplen con estándares internacionales de privacidad (como GDPR si corresponde).<br/><br/>Transferencias internacionales de datos<br/><br/>Los datos personales pueden ser almacenados en servidores ubicados fuera de Uruguay, principalmente en la Unión Europea o Estados Unidos, siempre garantizando:<br/><br/>Acuerdos de transferencia con cláusulas contractuales estándar;<br/>Adecuación normativa según la Unidad Reguladora y de Control de Datos Personales (URCDP);<br/>Medidas técnicas y organizativas suficientes para su protección.<br/><br/>¿Cuánto tiempo conservamos los datos?<br/><br/>Los datos serán almacenados durante el tiempo necesario para cumplir con las finalidades descritas o hasta que el Usuario solicite su supresión, salvo obligación legal de conservación.<br/><br/>Seguridad de la información<br/><br/>Implementamos medidas de seguridad técnicas, administrativas y organizativas apropiadas para proteger los datos contra accesos no autorizados, pérdidas, alteraciones o divulgaciones indebidas.<br/><br/>El acceso a la información está restringido exclusivamente al personal autorizado de Asistime y sus proveedores habilitados.<br/><br/>Derechos del usuario<br/><br/>El Usuario podrá ejercer en cualquier momento sus derechos reconocidos por la Ley N° 18.331:<br/><br/>Acceso a sus datos personales;<br/>Rectificación de datos inexactos;<br/>Supresión (derecho al olvido);<br/>Oposición al tratamiento;<br/>Portabilidad de los datos;<br/>Revocación del consentimiento en cualquier momento.<br/><br/>Para ejercer estos derechos, deberá enviar un correo electrónico a:<br/><br/>📩 legal@asistime.ai<br/><br/>Asistime podrá requerir documentación que permita verificar la identidad del solicitante.<br/><br/>Menores de edad<br/><br/>El Sitio Web no está dirigido a menores de 18 años. No recolectamos conscientemente información de menores. Si descubrimos que un menor ha proporcionado datos personales sin autorización, procederemos a su eliminación inmediata.<br/><br/>Cookies y otras tecnologías<br/><br/>Utilizamos cookies y tecnologías similares para:<br/><br/>Analizar el uso del Sitio Web;<br/>Mejorar el rendimiento y la seguridad;<br/>Personalizar contenidos y publicidad.<br/><br/>El Usuario podrá aceptar o rechazar el uso de cookies desde su navegador o en el banner inicial del Sitio. Más detalles se encuentran disponibles en nuestra Política de Cookies.<br/><br/>Modificaciones a esta política<br/><br/>Asistime se reserva el derecho de actualizar esta Política en cualquier momento. La versión vigente será siempre la publicada en el Sitio Web. El uso continuado del Sitio después de una actualización constituye aceptación de la nueva versión.<br/><br/>Contacto y reclamos<br/><br/>Para ejercer derechos, hacer consultas o presentar reclamos relacionados con esta Política, el Usuario podrá contactarse con el área legal de Asistime:<br/><br/>📩 legal@asistime.ai<br/><br/>También podrá dirigirse a la Unidad Reguladora y de Control de Datos Personales (URCDP) en Uruguay si considera que sus derechos han sido vulnerados.</div>
+</div>
+</div>
+<div class="modal" id="terms-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('terms-modal')">×</span>
+<h2>Términos y Condiciones</h2>
+<div class="scroll-content">Términos y condiciones de uso del sitio web<br/><br/>ASISTIME.AI S.A.S.<br/><br/> Última actualización: 17 de Abril de 2025<br/><br/>Alcance y aceptación<br/><br/>Los presentes Términos y Condiciones de Uso (en adelante, los “Términos”) regulan el acceso, navegación y utilización del sitio web accesible en la dirección https://www.asistime.ai (en adelante, el “Sitio Web”), propiedad de ASISTIME.AI S.A.S., sociedad por acciones simplificada con domicilio legal en la República Oriental del Uruguay (en adelante, “Asistime”).<br/><br/>El acceso al Sitio Web implica la aceptación plena, libre, expresa y sin reservas de los presentes Términos. Si el Usuario no está de acuerdo con los mismos, deberá abstenerse de utilizar el Sitio Web y/o cualquier servicio derivado.<br/><br/>Estos Términos no constituyen un contrato de prestación de servicios, salvo que el Usuario suscriba un acuerdo comercial por separado con Asistime.<br/><br/>Identidad de la empresa<br/><br/>Asistime.ai S.A.S. es una empresa legalmente constituida en la República Oriental del Uruguay, especializada en el desarrollo y comercialización de soluciones de automatización e inteligencia artificial para empresas.<br/><br/>Contacto:<br/>📍  Montevideo, Uruguay<br/>📩  legal@asistime.ai<br/><br/>Finalidad del sitio web<br/><br/>El Sitio Web tiene por finalidad:<br/><br/>Presentar información general sobre la empresa, su tecnología, servicios y soluciones;<br/>Permitir que los usuarios soliciten una demostración gratuita de la plataforma (“demo”);<br/>Facilitar el contacto comercial;<br/>Brindar acceso a materiales promocionales y contenido informativo;<br/>Permitir la interacción con asistentes conversacionales automatizados.<br/><br/>El contenido tiene carácter informativo y promocional. No implica por sí mismo contratación, suscripción ni aceptación automática de condiciones comerciales.<br/><br/>Tecnología de inteligencia artificial<br/><br/>Asistime.ai integra tecnologías de inteligencia artificial generativa, incluyendo modelos de lenguaje, asistentes virtuales y algoritmos automatizados que permiten generar texto, procesar lenguaje natural, automatizar flujos y brindar respuestas en múltiples canales.<br/><br/>El Usuario reconoce y acepta que:<br/><br/>Los resultados generados por IA son automáticos, no supervisados humanamente y pueden contener errores, sesgos o información inexacta.<br/>No constituyen asesoramiento técnico, legal, médico o financiero.<br/>Deben ser interpretados como una herramienta de asistencia, no como fuente de verdad.<br/>El Usuario es plenamente responsable del uso que haga del contenido generado.<br/>Asistime podrá reutilizar, analizar o mejorar sus modelos con base en los datos anonimizados generados por los Usuarios.<br/><br/>Limitaciones del sistema<br/><br/>Asistime no garantiza que los outputs generados por sus sistemas de IA:<br/><br/>Sean correctos, completos o actualizados;<br/>Sean adecuados a fines específicos del Usuario;<br/>Cumplan con normativas específicas locales o de industrias reguladas.<br/><br/>Propiedad intelectual de los modelos y outputs<br/><br/>Asistime es titular de los modelos, datasets, prompts, interfaces y tecnología que constituyen su plataforma, independientemente de si integran soluciones de terceros (por ejemplo, APIs de OpenAI u otros LLMs).<br/><br/>Los contenidos generados por la plataforma pueden ser utilizados por el Usuario conforme a estos Términos, pero no implican cesión de derechos de propiedad intelectual. El Usuario deberá abstenerse de utilizar los outputs para fines ilícitos o para entrenar modelos propios sin autorización expresa de Asistime.<br/><br/>Uso aceptable y conducta del usuario<br/><br/>El Usuario se obliga a utilizar el Sitio Web y sus funcionalidades conforme a la ley, la moral, el orden público y los presentes Términos.<br/><br/>Se prohíbe expresamente:<br/><br/>Usar el sitio para fines ilícitos o fraudulentos;<br/>Introducir malware, virus o software malicioso;<br/>Acceder sin autorización a sistemas o redes de terceros;<br/>Utilizar outputs de IA para desinformación, discriminación o suplantación;<br/>Crear cuentas falsas, si existieran funcionalidades futuras de registro.<br/><br/>Asistime se reserva el derecho de bloquear o restringir el acceso ante cualquier conducta que infrinja estos términos.<br/><br/>Cuentas de usuario (futuro)<br/><br/>En caso de que en el futuro se habilite el acceso mediante cuentas de usuario autenticadas, estas estarán sujetas a condiciones particulares adicionales. El Usuario se compromete desde ya a:<br/><br/>Proveer información veraz y mantener su cuenta segura;<br/><br/>No compartir sus credenciales;<br/><br/>Notificar inmediatamente cualquier uso no autorizado.<br/><br/>Asistime podrá suspender o eliminar cuentas que infrinjan estos principios.<br/><br/>Edad mínima<br/><br/>El Sitio está destinado a personas mayores de 18 años. Si el Usuario es menor de edad, deberá contar con autorización de sus padres o representantes legales.<br/><br/>Recolección y tratamiento de datos<br/><br/>El Sitio puede recolectar datos personales de los Usuarios a través de formularios, cookies o interacción con herramientas conversacionales.<br/><br/>Finalidades:<br/><br/>Coordinar demos;<br/><br/>Ofrecer productos y servicios;<br/><br/>Enviar contenidos comerciales;<br/><br/>Realizar análisis de uso interno;<br/><br/>Mejorar la experiencia del usuario.<br/><br/>El tratamiento se realizará conforme a la Ley N° 18.331 y su normativa complementaria. Más información disponible en la Política de Privacidad.<br/><br/>Cookies y tecnologías similares<br/><br/>El Sitio Web puede utilizar cookies propias y de terceros con fines técnicos, analíticos o publicitarios.<br/><br/>Al navegar el sitio, el Usuario consiente el uso de cookies conforme a lo establecido en la Política de Cookies. Puede configurar o rechazar las cookies desde su navegador.<br/><br/>Propiedad intelectual del sitio<br/><br/>Todos los elementos del Sitio Web —incluyendo diseños, textos, código, interfaces, gráficos, logos, bases de datos y arquitectura funcional— son propiedad exclusiva de Asistime o de sus licenciantes.<br/><br/>Queda prohibida su reproducción, distribución, modificación, ingeniería inversa o reutilización sin autorización previa.<br/><br/>Limitación de responsabilidad<br/><br/>El Sitio y sus contenidos se ofrecen “tal como están”, sin garantías de ningún tipo. Asistime no será responsable por:<br/><br/>Daños derivados del uso o imposibilidad de uso del Sitio;<br/><br/>Pérdida de datos o ingresos;<br/><br/>Fallos técnicos o interrupciones del servicio;<br/><br/>Resultados incorrectos generados por IA.<br/><br/>Indemnidad<br/><br/>El Usuario se obliga a mantener indemne, defender y eximir de responsabilidad a Asistime, sus socios, directores y empleados, frente a cualquier reclamo, pérdida o gasto derivado de:<br/><br/>El uso indebido del Sitio o de la IA;<br/><br/>El incumplimiento de estos Términos;<br/><br/>La violación de derechos de terceros o de la ley.<br/><br/>Esta obligación continuará vigente aun después del cese de uso del Sitio.<br/><br/>Jurisdicción internacional<br/><br/>Este Sitio puede ser accedido desde jurisdicciones fuera de Uruguay. Sin embargo, el uso del mismo se regirá únicamente por la legislación uruguaya. Asistime no garantiza el cumplimiento de regulaciones extranjeras.<br/><br/>Modificaciones<br/><br/>Asistime se reserva el derecho de actualizar estos Términos en cualquier momento. La versión vigente será siempre la publicada en el Sitio con su correspondiente fecha de actualización.<br/><br/>Ley aplicable y jurisdicción<br/><br/>Estos Términos se interpretarán conforme a las leyes de la República Oriental del Uruguay. Cualquier controversia será sometida a los Tribunales Ordinarios de la ciudad de Montevideo, con renuncia expresa a cualquier otro fuero.<br/><br/>Contacto<br/><br/>Para consultas legales, notificaciones o ejercicio de derechos:<br/><br/>📩 legal@asistime.ai</div>
+</div>
+</div>
+<footer style="text-align:center; padding: 2em 0;">
+<a href="#" onclick="toggleModal('privacy-modal')">Política de Privacidad</a> · 
+  <a href="#" onclick="toggleModal('terms-modal')">Términos y Condiciones</a>
+</footer>
+<!-- MODALES LEGALES -->
+<div class="modal" id="privacy-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('privacy-modal')">×</span>
+<h2>Política de Privacidad</h2>
+<div class="scroll-content">
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>En ASISTIME nos comprometemos a proteger la privacidad de quienes interactúan con nuestra plataforma...</p>
+<p>[Texto completo de la política irá aquí]</p>
+</div>
+</div>
+</div>
+<div class="modal" id="terms-modal">
+<div class="modal-content">
+<span class="close" onclick="toggleModal('terms-modal')">×</span>
+<h2>Términos y Condiciones</h2>
+<div class="scroll-content">
+<p>ASISTIME.AI S.A.S. Última actualización: 17 de Abril de 2025</p>
+<p>Estos Términos regulan el uso del sitio web y la aceptación por parte del usuario...</p>
+<p>[Texto completo de los términos irá aquí]</p>
+</div>
+</div>
+</div>
 </body>
 </html>
